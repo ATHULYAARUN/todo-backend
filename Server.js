@@ -17,6 +17,11 @@ mongoose.connect('mongodb+srv://athulyaarun2026:athulya12@cluster0.q2tcj.mongodb
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
 
+// Default route
+app.get('/', (req, res) => {
+  res.send('🚀 Todo Backend is running!');
+});
+
 // API routes
 app.use('/api/todos', todoRoutes);
 
